@@ -1,0 +1,194 @@
+
+.main-busca {
+  background: #FFFFFF;
+  width: 58%;
+  margin: 0 auto;
+  display: flex;
+  height: 90px;
+  padding: 25px 37px;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 48px;
+  position: relative;
+  top: -45px;
+  z-index: 50;
+}
+
+.main-busca-input {
+  flex: 9;
+  border: none;
+  color: #334459;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+.main-busca-input::placeholder {
+  color: #D6D6D6;
+}
+
+textarea:focus, input:focus, select:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
+.main-busca-botao {
+  flex: 2;
+  background: #F67A56;
+  border: none;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 23px;
+}
+
+button:focus, button:active {
+  outline: none;
+}
+
+.fa-search {
+  color: #FFFFFF;
+  font-size: 1.25em;
+}
+
+
+
+/* ----------------------------------------------------------------------------------------------------------
+Mensagem de erro que aparecerá quando o usuário tentar pesquisar sem digitar texto
+------------------------------------------------------------------------------------------------------------- */
+.mensagem-erro {
+  display: none;
+}
+
+.mensagem-erro{
+  display: block;
+  background: #F8D7DA;
+  max-width: 58%;
+  margin: 0 auto;
+  font-family: 'Nunito', sans-serif;
+  line-height: 2em;
+  text-align: center;
+  font-size: 1.25em;
+  color: #721c24;
+  border: #f5c6cb 1px solid;
+  border-radius: 10px;
+  margin-top: -30px;
+}
+
+/* Estilização da area de mensagens e imagens */
+
+.media-post {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 752px;
+  max-height: 100%;
+  border: 1px solid #E8EEF1;
+  margin: 1.125em auto;
+  min-width: 260px;
+}
+
+.media-info {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.img-perfil {
+  max-width: 64px;
+  margin: 5px;
+}
+
+.info-usuario, .info-usuario h3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: flex-start;
+  margin: 0 5px;
+}
+
+.info-usuario p {
+  margin: 0 2px;
+  color: #75889D;
+  font-size: 1.125em;
+}
+
+.media-img {
+  display: initial;
+  margin: 5px auto 30px auto;
+  max-width: 647px;
+}
+
+.media-post a {
+  text-decoration: none;
+  font-size: 1.125em;
+  color: blue;
+}
+
+/* --Animação do scroll dos textos*/
+
+[data-anime] {
+  opacity: 1;
+  transition: .3s;
+}
+
+[data-anime="left"] {
+  transform: translate3d(50px, 0, 0);
+}
+
+[data-anime="rigth"] {
+  transform: translate3d(50px, 0, 0);
+}
+
+[data-anime="down"] {
+  transform: translate3d(0, 100px, 0);
+}
+
+[data-anime].animate{
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+@media only screen and (min-width: 426px) {
+  .media-mensagem {
+      margin-left: 35.5px;
+      margin-right: 35.5px;
+      margin-bottom: 15px;;
+  }
+}
+
+.media-mensagem a:hover {
+  color: rgb(62, 109, 252);
+  transition: all .3s;
+}
+
+.media-img a:hover {
+  color: rgb(62, 109, 252);
+  transition: all .3s;
+}
+
+main {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.gallery img{
+  max-width: 150px;
+  padding: 5px;
+  transition: 1s;
+}
+.gallery img:hover{
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width: 769px) {
+  .media-mensagem{
+      margin-left: 15px;
+  }
+  .gallery img{
+      max-width: 120px;
+  }
+}

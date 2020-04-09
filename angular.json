@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "cwvf"
+    }
+  },
+  "defaultProject": "cwvf",
+  "cli": {
+    "analytics": "66ffd035-c267-4bf1-b614-a89f6387a6f5"
+  }
 }

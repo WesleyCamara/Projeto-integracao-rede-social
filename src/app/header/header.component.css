@@ -1,0 +1,244 @@
+/* Estilização do topo da página */
+
+.header {
+  background-color: #F67A56;
+  height: 400px;
+}
+
+.header-container {
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  padding-top: 30px;
+  justify-content: space-between;
+}
+
+.header-nav {
+  margin-left: 200px;
+}
+
+.header a, .header h1, .nav-separador {
+  font-weight: 700;
+  font-size: 2.25em;
+  line-height: 50px;
+  color: #FFFFFF;
+}
+
+.header a {
+  letter-spacing: 0.1em;
+}
+
+.header a:hover {
+  color: #334459;
+  transition: all 0.4s ease;
+}
+
+.main-busca-botao:hover{
+  background: #334459;
+  transition: all 0.4s ease;
+}
+
+.nav-separador {
+  margin: 5px;
+}
+
+.header-logo {
+  margin-top: 50px;
+}
+
+/* Estilização da caixa de busca */
+/* removido */
+/*
+.main-busca {
+  background: #FFFFFF;
+  width: 58%;
+  margin: 0 auto;
+  display: flex;
+  height: 90px;
+  padding: 25px 37px;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 48px;
+  position: relative;
+  top: -45px;
+  z-index: 50;
+}
+
+.main-busca-input {
+  flex: 9;
+  border: none;
+  color: #334459;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+.main-busca-input::placeholder {
+  color: #D6D6D6;
+}
+
+textarea:focus, input:focus, select:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
+.main-busca-botao {
+  flex: 2;
+  background: #F67A56;
+  border: none;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 23px;
+}
+
+button:focus, button:active {
+  outline: none;
+}
+
+.fa-search {
+  color: #FFFFFF;
+  font-size: 1.25em;
+} */
+
+
+/* Estilização do frame header */
+
+.frame-topo {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.frame-footer {
+  width: 100%;
+  height: 30vh;
+  overflow: hidden;
+}
+
+
+/* parte responsiva do mobile */
+
+/* topo */
+
+@media only screen and (max-width: 1300px) {
+  .header {
+      height: 400px;
+  }
+  .header-container {
+      padding: 20px;
+      flex-wrap: wrap;
+      justify-content: space-around;
+  }
+  .header-logo {
+      margin-top: 10px;
+  }
+  .main-busca {
+      max-width: 70%;
+      padding: 17px;
+      height: 80px;
+  }
+  .frame-footer {
+      height: 18vh;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+      height: 100vh;
+  }
+  .header-container {
+      flex-direction: column;
+      align-items: center;
+  }
+  .header-nav {
+      margin: 0;
+  }
+  .header-logo {
+      max-width: 50%;
+  }
+  .frame-topo {
+      height: 380px;
+  }
+  .main-busca {
+      width: 90%;
+  }
+  .mensagem a {
+      margin: auto 100px;
+      padding-right: 10px;
+      padding-bottom: 50px;
+  }
+  .frame-footer {
+      height: 14vh;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .header {
+      height: 100vh;
+  }
+  .header-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+      padding-top: 5px;
+  }
+  .header-nav {
+      margin: 0;
+  }
+  .header-logo {
+      max-width: 90%;
+  }
+  .main-busca {
+      max-width: 90%;
+      padding: 15px;
+      height: 60px;
+      top: -30px;
+  }
+  .frame-topo {
+      height: 350px;
+  }
+  .frame-footer {
+      height: 16vh;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .header-nav {
+      font-size: 0.8em;
+  }
+  .header {
+      height: 100vh;
+  }
+  .main-busca {
+      padding: 10px;
+  }
+  .main-busca-input {
+      letter-spacing: 0;
+  }
+  .main-busca-input::placeholder {
+      font-size: 0.95em;
+  }
+  .main-busca-botao {
+      padding: 10px;
+  }
+  .header-logo {
+      max-width: 50%;
+  }
+  .frame-topo {
+      height: 250px;
+  }
+}
+
+@media only screen and (max-width: 325px) {
+  .frame-topo {
+      height: 245px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .mensagem-erro.ativo {
+      max-width: 95%;
+      font-size: 1em;
+      margin-top: -15px;
+      margin-bottom: 15px;
+  }
+}

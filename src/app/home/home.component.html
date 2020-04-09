@@ -1,0 +1,236 @@
+<main>
+  <!-- Caixa de busca -->
+  <form class="main-busca" id="busca" onsubmit=pesquisar(event) action="index.html" method="GET">
+      <input type="text" maxlength="140" id="input-busca" onkeyup=valida(event) class="main-busca-input" placeholder="Digite sua pesquisa sem o #" autofocus />
+      <button type="submit" class="main-busca-botao" >
+          <i class="fas fa-search" id="img-busca"></i>
+      </button>
+  </form>
+
+  <div class="mensagem-erro">
+      <p>Digite um texto para pesquisa</p>
+  </div>
+
+  <!--Área de visualização das 10 ultimas postagens-->
+  <section class="media-container">
+      <!-- Publicação post 1 -->
+      <div class="media-post" data-anime="down">
+          <div class="media-info">
+              <div class="img-perfil">
+                  <img src="../../assets/img/img-perfil1.png" alt="Imagem de Perfil 1">
+              </div>
+              <div class="info-usuario">
+                  <h3 class="perfil-usuario">Ciara</h3>
+                  <p class="id-usuario">@asdasd.</p>
+                  <p class="data-usuario">Maio 20</p>
+
+              </div>
+          </div>
+          <div class="media-mensagem">
+              <p class="mensagem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut interdum massa.
+                  Nullam gravida, ante aliquet cursus tincidunt, lectus amet.</p>
+              <a class="link" href="https://twitter.com">Visualizar mais no Twitter</a>
+          </div>
+      </div>
+      <!--Fim da Publicação post 1-->
+      <!-- Publicação post 2 -->
+      <div class="media-post" data-anime="down">
+          <div class="media-info">
+              <div class="img-perfil">
+                  <img src="../../assets/img/img-perfil1.png" alt="Imagem de Perfil 1">
+              </div>
+              <div class="info-usuario">
+                  <h3 class="perfil-usuario">Maria</h3>
+                  <p class="id-usuario">@asdasd.</p>
+                  <p class="data-usuario">Maio 20</p>
+
+              </div>
+          </div>
+          <div class="media-mensagem">
+              <p class="mensagem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut interdum massa.
+                  Nullam gravida, ante aliquet cursus tincidunt, lectus amet.</p>
+              <a class="link" href="https://twitter.com">Visualizar mais no Twitter</a>
+          </div>
+      </div>
+      <!--Fim da Publicação post 2-->
+      <!-- Publicação post 3 -->
+      <div class="media-post" data-anime="down">
+          <div class="media-info">
+              <div class="img-perfil">
+                  <img src="../../assets/img/img-perfil1.png" alt="Imagem de Perfil 1">
+              </div>
+              <div class="info-usuario">
+                  <h3 class="perfil-usuario">Joana</h3>
+                  <p class="id-usuario">@asdasd.</p>
+                  <p class="data-usuario">Maio 20</p>
+
+              </div>
+          </div>
+          <div class="media-mensagem">
+              <p class="mensagem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut interdum massa.
+                  Nullam gravida, ante aliquet cursus tincidunt, lectus amet.</p>
+              <a class="link" href="https://twitter.com">Visualizar mais no Twitter</a>
+          </div>
+      </div>
+      <!--Fim da Publicação post 3-->
+      <!-- Publicação post 4 -->
+      <div class="media-post" data-anime="down">
+          <div class="media-info">
+              <div class="img-perfil">
+                  <img src="../../assets/img/img-perfil1.png" alt="Imagem de Perfil 1">
+              </div>
+              <div class="info-usuario">
+                  <h3 class="perfil-usuario">Isabela</h3>
+                  <p class="id-usuario">@asdasd.</p>
+                  <p class="data-usuario">Maio 20</p>
+
+              </div>
+          </div>
+          <div class="media-mensagem">
+              <p class="mensagem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut interdum massa.
+                  Nullam gravida, ante aliquet cursus tincidunt, lectus amet.</p>
+              <a class="link" href="https://twitter.com">Visualizar mais no Twitter</a>
+          </div>
+      </div>
+      <!--Fim da Publicação post 4-->
+      <!-- Publicação post 5 -->
+      <div class="media-post" data-anime="down">
+          <div class="media-info">
+              <div class="img-perfil">
+                  <img src="../../assets/img/img-perfil1.png" alt="Imagem de Perfil 1">
+              </div>
+              <div class="info-usuario">
+                  <h3 class="perfil-usuario">Ana</h3>
+                  <p class="id-usuario">@asdasd.</p>
+                  <p class="data-usuario">Maio 20</p>
+
+              </div>
+          </div>
+          <div class="media-mensagem">
+              <p class="mensagem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut interdum massa.
+                  Nullam gravida, ante aliquet cursus tincidunt, lectus amet.</p>
+              <a class="link" href="https://twitter.com">Visualizar mais no Twitter</a>
+          </div>
+      </div>
+      <!--Fim da Publicação post 5-->
+      <!-- Publicação post 6 -->
+      <div class="media-post" data-anime="down">
+          <div class="media-info">
+              <div class="img-perfil">
+                  <img src="../../assets/img/img-perfil1.png" alt="Imagem de Perfil 1">
+              </div>
+              <div class="info-usuario">
+                  <h3 class="perfil-usuario">Arielle</h3>
+                  <p class="id-usuario">@asdasd.</p>
+                  <p class="data-usuario">Maio 20</p>
+
+              </div>
+          </div>
+          <div class="media-mensagem">
+              <p class="mensagem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut interdum massa.
+                  Nullam gravida, ante aliquet cursus tincidunt, lectus amet.</p>
+              <a class="link" href="https://twitter.com">Visualizar mais no Twitter</a>
+          </div>
+      </div>
+      <!--Fim da Publicação post 6-->
+      <!-- Publicação post 7 -->
+      <div class="media-post" data-anime="down">
+          <div class="media-info">
+              <div class="img-perfil">
+                  <img src="../../assets/img/img-perfil1.png" alt="Imagem de Perfil 1">
+              </div>
+              <div class="info-usuario">
+                  <h3 class="perfil-usuario">Beatriz</h3>
+                  <p class="id-usuario">@asdasd.</p>
+                  <p class="data-usuario">Maio 20</p>
+
+              </div>
+          </div>
+          <div class="media-mensagem">
+              <p class="mensagem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut interdum massa.
+                  Nullam gravida, ante aliquet cursus tincidunt, lectus amet.</p>
+              <a class="link" href="https://twitter.com">Visualizar mais no Twitter</a>
+          </div>
+      </div>
+      <!--Fim da Publicação post 7-->
+      <!-- Publicação post 8 -->
+      <div class="media-post" data-anime="down">
+          <div class="media-info">
+              <div class="img-perfil">
+                  <img src="../../assets/img/img-perfil1.png" alt="Imagem de Perfil 1">
+              </div>
+              <div class="info-usuario">
+                  <h3 class="perfil-usuario">Bianca</h3>
+                  <p class="id-usuario">@asdasd.</p>
+                  <p class="data-usuario">Maio 20</p>
+
+              </div>
+          </div>
+          <div class="media-mensagem">
+              <p class="mensagem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut interdum massa.
+                  Nullam gravida, ante aliquet cursus tincidunt, lectus amet.</p>
+              <a class="link" href="https://twitter.com">Visualizar mais no Twitter</a>
+          </div>
+      </div>
+      <!--Fim da Publicação post 8-->
+      <!-- Publicação post 9 -->
+      <div class="media-post" data-anime="down">
+          <div class="media-info">
+              <div class="img-perfil">
+                  <img src="../../assets/img/img-perfil1.png" alt="Imagem de Perfil 1">
+              </div>
+              <div class="info-usuario">
+                  <h3 class="perfil-usuario">Carla</h3>
+                  <p class="id-usuario">@asdasd.</p>
+                  <p class="data-usuario">Maio 20</p>
+
+              </div>
+          </div>
+          <div class="media-mensagem">
+              <p class="mensagem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut interdum massa.
+                  Nullam gravida, ante aliquet cursus tincidunt, lectus amet.</p>
+              <a class="link" href="https://twitter.com">Visualizar mais no Twitter</a>
+          </div>
+      </div>
+      <!--Fim da Publicação post 9-->
+      <!-- Publicação post 10 -->
+      <div class="media-post media-post-texto" data-anime="down">
+          <div class="media-info">
+              <div class="img-perfil">
+                  <img src="../../assets/img/img-perfil1.png" alt="Imagem de Perfil 1">
+              </div>
+              <div class="info-usuario">
+                  <h3 class="perfil-usuario">Carol</h3>
+                  <p class="id-usuario">@asdasd.</p>
+                  <p class="data-usuario">Maio 20</p>
+
+              </div>
+          </div>
+          <div class="media-mensagem">
+              <p class="mensagem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut interdum massa.
+                  Nullam gravida, ante aliquet cursus tincidunt, lectus amet.</p>
+              <a class="link" href="https://twitter.com">Visualizar mais no Twitter</a>
+          </div>
+      </div>
+      <!--Fim da Publicação post 10-->
+
+
+      <!--Área de visualização das 10 ultimas imagens-->
+      <div class="media-post">
+          <div class="gallery">
+              <a href="../../assets/img/img-post1.jpg"data-lightbox="media-post" data-title="Imagem Post 1 - Publicado por: @Ciara"><img src="../../assets/img/img-post1-small.jpg"></a>
+              <a href="../../assets/img/img-post2.jpg"data-lightbox="media-post" data-title="Imagem Post 2 - Publicado por: @Maria"><img src="../../assets/img/img-post2-small.jpg"></a>
+              <a href="../../assets/img/img-post3.jpg"data-lightbox="media-post" data-title="Imagem Post 3 - Publicado por: @Joana"><img src="../../assets/img/img-post3-small.jpg"></a>
+              <a href="../../assets/img/img-post4.jpg"data-lightbox="media-post" data-title="Imagem Post 4 - Publicado por: @Isabela"><img src="../../assets/img/img-post4-small.jpg"></a>
+              <a href="../../assets/img/img-post5.jpg"data-lightbox="media-post" data-title="Imagem Post 5 - Publicado por: @Ana"><img src="../../assets/img/img-post10-small.jpg"></a>
+              <a href="../../assets/img/img-post6.jpg"data-lightbox="media-post" data-title="Imagem Post 6 - Publicado por: @Arielle"><img src="../../assets/img/img-post5-small.jpg"></a>
+              <a href="../../assets/img/img-post7.jpg"data-lightbox="media-post" data-title="Imagem Post 7 - Publicado por: @Beatriz"><img src="../../assets/img/img-post6-small.jpg"></a>
+              <a href="../../assets/img/img-post8.jpg"data-lightbox="media-post" data-title="Imagem Post 8 - Publicado por: @Bianca"><img src="../../assets/img/img-post7-small.jpg"></a>
+              <a href="../../assets/img/img-post9.jpg"data-lightbox="media-post" data-title="Imagem Post 9 - Publicado por: @Carla"><img src="../../assets/img/img-post8-small.jpg"></a>
+              <a href="../../assets/img/img-post10.jpg"data-lightbox="media-post" data-title="Imagem Post 10 - Publicado por: @Carol"><img src="../../assets/img/img-post9-small.jpg"></a>
+          </div>
+      </div>
+      <!--Fim da área dos Posts-->
+  </section>
+
+</main>

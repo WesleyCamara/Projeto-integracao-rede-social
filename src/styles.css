@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  min-height: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, p, ol, ul, li {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* fonte padrão: font-family: 'Nunito', sans-serif;
+
+Cores:
+Destaque #F67A56 (header, botoes e detalhes pontuais)
+Base #FFF7E8 (blocos e contornos),
+Textos claros #FFFFFF,
+Textos escuros e rodapé #334459
+*/
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #FFFFFF;
+}

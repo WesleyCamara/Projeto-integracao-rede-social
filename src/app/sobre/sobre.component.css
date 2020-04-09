@@ -1,0 +1,214 @@
+.estilo-geral {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+}
+
+.estilo-geral a {
+  text-decoration: none;
+}
+
+/*parte sobre*/
+
+.container-sobre {
+  display: flex;
+  max-width: 80%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.explicação-proj {
+  max-width: 560px;
+  margin-top: 360px;
+}
+
+.explicação-proj p {
+  max-width: 560px;
+}
+
+.explicação-proj h1 {
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  text-align: center;
+  color: #334459;
+  font-weight: 700;
+  ;
+}
+
+.explicação-proj p {
+  font-size: 1.25em;
+  color: #334459;
+  text-align: justify;
+}
+
+.img-sobre {
+  max-width: 469px;
+  margin-left: 37px;
+}
+
+@media screen and (max-width: 1024px) {
+  .explicação-proj {
+      max-width: 560px;
+      margin-top: 50px;
+  }
+  .img-sobre {
+      max-width: 469px;
+      margin-top: 37px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .img-sobre {
+      max-width: 80%;
+      margin-top: 160px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .img-sobre {
+      max-width: 80%;
+      margin-top: 210px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .img-sobre {
+      max-width: 80%;
+      margin-top: 250px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .img-sobre {
+      max-width: 80%;
+      margin-top: 330px;
+  }
+}
+
+/*parte equipe*/
+
+#equipe {
+  padding: 10rem 0;
+}
+
+.título {
+  text-transform: uppercase;
+  font-size: 3.5em;
+  letter-spacing: 3px;
+  text-align: center;
+  color: #334459;
+  position: relative;
+  padding-bottom: 4rem;
+}
+
+.explicação-proj {
+  top: 864px;
+  left: 137px;
+  max-width: 557px;
+  height: 333px;
+}
+
+.equipe-container {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.card {
+  width: 22rem;
+  background-color: #ebeef8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: .5rem .4rem;
+  box-shadow: .5rem .5rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+.card:hover {
+  box-shadow: .5rem .5rem 3rem #F67A56;
+}
+
+.card .card-img {
+  width: 100%;
+  height: 16rem;
+  object-fit: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 78%, 0% 100%);
+}
+
+.img-perfil-sobre {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: -6rem;
+  z-index: 99;
+  border: 1px solid #ebeef8;
+}
+
+.card h2 {
+  font-size: 2.5rem;
+  color: #334459;
+  margin: 2rem 0;
+}
+
+.introducao {
+  font-size: 1em;
+  margin: 1.5rem 1rem;
+  text-align: center;
+  color: #334459;
+}
+
+.card .btn {
+  padding: 1rem 2.5rem;
+  background-color: #F67A56;
+  border-radius: 2rem;
+  margin: 1rem 0;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  transition: all .5s;
+}
+
+.card .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: .5rem .5rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.card .btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.redes-sociais {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem 0;
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.redes-sociais i {
+  font-size: 3rem;
+  color: #334459;
+  transition: color .5s;
+}
+
+.redes-sociais i:hover {
+  color: #F67A56;
+}
+
+@media screen and (min-width: 700px) {
+  .equipe-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+  }
+  .card {
+      margin: .5rem;
+  }
+}

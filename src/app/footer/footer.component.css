@@ -1,0 +1,38 @@
+/* Estilização do rodapé */
+
+.footer {
+  background: #334459;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer p {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1.25em;
+}
+
+
+
+/* rodapé */
+
+@media only screen and (max-width: 770px) {
+  .footer {
+      height: 150px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .footer {
+      max-width: 100%;
+      height: 130px;
+  }
+  .footer p {
+      display: inline-block;
+      text-align: center;
+      font-size: 1em;
+      ;
+  }
+}
