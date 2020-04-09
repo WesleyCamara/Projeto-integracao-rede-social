@@ -33,7 +33,7 @@
   transition: all 0.4s ease;
 }
 
-.main-busca-botao:hover{
+.main-busca-botao:hover {
   background: #334459;
   transition: all 0.4s ease;
 }
@@ -46,199 +46,106 @@
   margin-top: 50px;
 }
 
-/* Estilização da caixa de busca */
-/* removido */
-/*
-.main-busca {
-  background: #FFFFFF;
-  width: 58%;
-  margin: 0 auto;
-  display: flex;
-  height: 90px;
-  padding: 25px 37px;
-  box-shadow: 0px 3px 6px #00000029;
-  border-radius: 48px;
-  position: relative;
-  top: -45px;
-  z-index: 50;
-}
-
-.main-busca-input {
-  flex: 9;
-  border: none;
-  color: #334459;
-  font-size: 1em;
-  letter-spacing: 0.1em;
-  font-weight: bold;
-}
-
-.main-busca-input::placeholder {
-  color: #D6D6D6;
-}
-
-textarea:focus, input:focus, select:focus {
-  box-shadow: 0 0 0 0;
-  border: 0 none;
-  outline: 0;
-}
-
-.main-busca-botao {
-  flex: 2;
-  background: #F67A56;
-  border: none;
-  box-shadow: 0px 3px 6px #00000029;
-  border-radius: 23px;
-}
-
-button:focus, button:active {
-  outline: none;
-}
-
-.fa-search {
-  color: #FFFFFF;
-  font-size: 1.25em;
-} */
-
-
-/* Estilização do frame header */
-
-.frame-topo {
-  width: 100%;
-  height: 400px;
-  overflow: hidden;
-}
-
-.frame-footer {
-  width: 100%;
-  height: 30vh;
-  overflow: hidden;
-}
-
-
 /* parte responsiva do mobile */
-
-/* topo */
 
 @media only screen and (max-width: 1300px) {
   .header {
-      height: 400px;
+    height: 400px;
   }
   .header-container {
-      padding: 20px;
-      flex-wrap: wrap;
-      justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
   .header-logo {
-      margin-top: 10px;
+    margin-top: 10px;
   }
   .main-busca {
-      max-width: 70%;
-      padding: 17px;
-      height: 80px;
+    max-width: 70%;
+    padding: 17px;
+    height: 80px;
   }
   .frame-footer {
-      height: 18vh;
+    height: 18vh;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .header {
-      height: 100vh;
+    height: 400px;
   }
   .header-container {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
   .header-nav {
-      margin: 0;
+    margin: 0;
   }
   .header-logo {
-      max-width: 50%;
-  }
-  .frame-topo {
-      height: 380px;
+    max-width: 50%;
   }
   .main-busca {
-      width: 90%;
+    width: 90%;
   }
   .mensagem a {
-      margin: auto 100px;
-      padding-right: 10px;
-      padding-bottom: 50px;
-  }
-  .frame-footer {
-      height: 14vh;
+    margin: auto 100px;
+    padding-right: 10px;
+    padding-bottom: 50px;
   }
 }
 
 @media only screen and (max-width: 425px) {
   .header {
-      height: 100vh;
+    height: 400px;
   }
   .header-container {
-      flex-direction: column;
-      align-items: center;
-      padding: 0;
-      padding-top: 5px;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    padding-top: 5px;
   }
   .header-nav {
-      margin: 0;
+    margin: 0;
   }
   .header-logo {
-      max-width: 90%;
+    max-width: 90%;
   }
   .main-busca {
-      max-width: 90%;
-      padding: 15px;
-      height: 60px;
-      top: -30px;
-  }
-  .frame-topo {
-      height: 350px;
-  }
-  .frame-footer {
-      height: 16vh;
+    max-width: 90%;
+    padding: 15px;
+    height: 60px;
+    top: -30px;
   }
 }
 
 @media only screen and (max-width: 375px) {
-  .header-nav {
-      font-size: 0.8em;
-  }
   .header {
-      height: 100vh;
+    height: 280px;
+  }
+  .header-nav {
+    font-size: 0.8em;
   }
   .main-busca {
-      padding: 10px;
+    padding: 10px;
   }
   .main-busca-input {
-      letter-spacing: 0;
+    letter-spacing: 0;
   }
   .main-busca-input::placeholder {
-      font-size: 0.95em;
+    font-size: 0.95em;
   }
   .main-busca-botao {
-      padding: 10px;
+    padding: 10px;
   }
   .header-logo {
-      max-width: 50%;
-  }
-  .frame-topo {
-      height: 250px;
+    max-width: 50%;
   }
 }
 
 @media only screen and (max-width: 325px) {
-  .frame-topo {
-      height: 245px;
+  .header {
+    height: 280px;
   }
 }
 
-@media only screen and (max-width: 430px) {
-  .mensagem-erro.ativo {
-      max-width: 95%;
-      font-size: 1em;
-      margin-top: -15px;
-      margin-bottom: 15px;
-  }
-}
+

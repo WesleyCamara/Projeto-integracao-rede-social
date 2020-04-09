@@ -50,6 +50,54 @@ button:focus, button:active {
 }
 
 
+@media only screen and (max-width: 1300px) {
+  .main-busca {
+    max-width: 70%;
+    padding: 17px;
+    height: 80px;
+  }
+  .frame-footer {
+    height: 18vh;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .main-busca {
+    width: 90%;
+  }
+  .mensagem a {
+    margin: auto 100px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .main-busca {
+    max-width: 90%;
+    padding: 15px;
+    height: 60px;
+    top: -30px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .main-busca {
+    padding: 10px;
+  }
+  .main-busca-input {
+    letter-spacing: 0;
+  }
+  .main-busca-input::placeholder {
+    font-size: 0.95em;
+  }
+  .main-busca-botao {
+    padding: 10px;
+  }
+
+}
+
 
 /* ----------------------------------------------------------------------------------------------------------
 Mensagem de erro que aparecerá quando o usuário tentar pesquisar sem digitar texto
@@ -73,7 +121,22 @@ Mensagem de erro que aparecerá quando o usuário tentar pesquisar sem digitar t
   margin-top: -30px;
 }
 
+@media only screen and (max-width: 430px) {
+  .mensagem-erro {
+    max-width: 95%;
+    font-size: 1em;
+    margin-top: -15px;
+    margin-bottom: 15px;
+  }
+}
+
+/* ----------------------------------------------------------------------------------------------------------
 /* Estilização da area de mensagens e imagens */
+/*------------------------------------------------------------------------------------------------------------- */
+
+.media-container{
+  margin-top: -100px;
+}
 
 .media-post {
   display: flex;
