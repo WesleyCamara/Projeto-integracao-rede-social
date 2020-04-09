@@ -2,7 +2,7 @@
 
 .footer {
   background: #334459;
-  height: 100vh;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,8 +13,6 @@
   font-weight: 700;
   font-size: 1.25em;
 }
-
-
 
 /* rodapé */
 
