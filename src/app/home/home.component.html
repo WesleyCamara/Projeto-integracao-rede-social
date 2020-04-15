@@ -2,7 +2,7 @@
   <!-- Caixa de busca -->
   <form class="main-busca" id="busca" (submit)="pesquisar($event)">
       <input type="text"  id="input-busca"  class="main-busca-input"
-      placeholder="Digite sua pesquisa sem o #" autofocus #conteudoInput (keyup)="valida($event)"/>
+      placeholder="Digite o termo para pesquisa" autofocus #conteudoInput (keyup)="removeErro()"/>
       <button type="submit" class="main-busca-botao" >
           <i class="fas fa-search" id="img-busca"></i>
       </button>

@@ -9,7 +9,9 @@ export class HomeComponent implements OnInit {
 
   erroAtivo: any;
   @ViewChild('conteudoInput') conteudoInput: ElementRef;
-  conteudoPesquisa: any;
+
+  // variavel que recebe o conteudo limpo que será pesquisado
+  public conteudoPesquisa: any;
 
   constructor() { }
 
@@ -26,17 +28,18 @@ export class HomeComponent implements OnInit {
   // Verifica se o conteudo de pesquisa não está vazio
   verificaConteudoVazio(valorInput) {
     if (!valorInput) {
-      this.erroAtivo = 'erro';
+      this.erroAtivo = true;
     } else {
-      this.erroAtivo = '';
+      this.erroAtivo = false;
     }
   }
 
   // Valida os dados para pesquisa
-  valida(event) {
-    this.erroAtivo = '';
+  removeErro() {
+    if (this.conteudoInput.nativeElement.value){
+    this.erroAtivo = false;
+    }
   }
-
 
   // Limpa o texto tirando o caractere # se houver
   limpaHashtag(texto) {
