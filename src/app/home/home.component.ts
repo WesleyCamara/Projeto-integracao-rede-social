@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -8,40 +8,43 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   erroAtivo: any;
-  conteudoInput: any;
+  @ViewChild('conteudoInput') conteudoInput: ElementRef;
+  conteudoPesquisa: any;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-   // função de consultar a API, ainda não foi implementada, no momento só previne o envio do formulário
-    pesquisar(event: any) {
-      event.preventDefault();
-      this.verificaConteudoVazio(event);
-    }
-
-    verificaConteudoVazio(event) {
-      if (!this.conteudoInput) {
-        this.erroAtivo = 'erro';
-      } else {
-        this.erroAtivo = '';
-      }
+  // Após pesquisa chama a validação do valor
+  pesquisar(event) {
+    event.preventDefault();
+    this.verificaConteudoVazio(this.conteudoInput.nativeElement.value);
+    this.limpaHashtag(this.conteudoInput.nativeElement.value);
   }
 
-    // // Valida os dados para pesquisa
-    valida(event){
+  // Verifica se o conteudo de pesquisa não está vazio
+  verificaConteudoVazio(valorInput) {
+    if (!valorInput) {
+      this.erroAtivo = 'erro';
+    } else {
       this.erroAtivo = '';
-      const textoVerificar = event.target.value;
-      this.limpaHashtag(textoVerificar);
     }
+  }
+
+  // Valida os dados para pesquisa
+  valida(event) {
+    this.erroAtivo = '';
+  }
 
 
-    // Limpa o texto tirando o caractere # se houver
-    limpaHashtag(texto) {
-        if (texto[0] === '#') {
-          texto = texto.replace(texto[0], '');
-        }
+  // Limpa o texto tirando o caractere # se houver
+  limpaHashtag(texto) {
+    if (texto[0] === '#') {
+      texto = texto.replace(texto[0], '');
     }
+    this.conteudoPesquisa = texto;
+    console.log(this.conteudoPesquisa);
+  }
 
 }
