@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { ApiTwitterService } from '../service/api-twitter.service';
+import { ApiTwitterService } from '../services/api-twitter.service';
 
 
 @Component({
