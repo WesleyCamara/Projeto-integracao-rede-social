@@ -7,7 +7,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  // @ViewChild ('erroAtivo') erroAtivo:any
   erroAtivo: any
   conteudoInput: any
 
