@@ -235,8 +235,9 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 1em;
+  padding-top: 6em;
   padding-bottom: 1em;
+
 }
 .gallery img{
   max-width: 150px;
