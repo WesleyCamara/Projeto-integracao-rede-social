@@ -102,10 +102,6 @@ button:focus, button:active {
 /* ----------------------------------------------------------------------------------------------------------
 Mensagem de erro que aparecerá quando o usuário tentar pesquisar sem digitar texto
 ------------------------------------------------------------------------------------------------------------- */
-.mensagem-erro {
-  display: none;
-}
-
 .mensagem-erro{
   display: block;
   background: #F8D7DA;

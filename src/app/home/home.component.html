@@ -1,13 +1,13 @@
 <main>
   <!-- Caixa de busca -->
-  <form class="main-busca" id="busca" onsubmit=pesquisar(event) action="index.html" method="GET">
-      <input type="text" maxlength="140" id="input-busca" onkeyup=valida(event) class="main-busca-input" placeholder="Digite sua pesquisa sem o #" autofocus />
+  <form class="main-busca" id="busca" (submit)="pesquisar($event)">
+      <input type="text"  id="input-busca"  class="main-busca-input" placeholder="Digite sua pesquisa sem o #" autofocus (keyup)="valida($event)"/>
       <button type="submit" class="main-busca-botao" >
           <i class="fas fa-search" id="img-busca"></i>
       </button>
   </form>
 
-  <div class="mensagem-erro">
+  <div class="mensagem-erro" #erroAtivo *ngIf="erroAtivo">
       <p>Digite um texto para pesquisa</p>
   </div>
 
