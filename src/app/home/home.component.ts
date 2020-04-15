@@ -7,8 +7,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  erroAtivo: any
-  conteudoInput: any
+  erroAtivo: any;
+  conteudoInput: any;
 
   constructor() { }
 
@@ -41,7 +41,6 @@ export class HomeComponent implements OnInit {
     limpaHashtag(texto) {
         if (texto[0] === '#') {
           texto = texto.replace(texto[0], '');
-            console.log('valor limpo: ' + texto);
         }
     }
 
