@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { ApiTwitterService } from '../service/api-twitter.service';
+
 
 @Component({
   selector: 'app-home',
@@ -11,9 +13,9 @@ export class HomeComponent implements OnInit {
   @ViewChild('conteudoInput') conteudoInput: ElementRef;
 
   // variavel que recebe o conteudo limpo que será pesquisado
-  public conteudoPesquisa: any;
 
-  constructor() { }
+
+  constructor( private apiTwitterService: ApiTwitterService  ) { }
 
   ngOnInit(): void {
   }
@@ -46,8 +48,8 @@ export class HomeComponent implements OnInit {
     if (texto[0] === '#') {
       texto = texto.replace(texto[0], '');
     }
-    this.conteudoPesquisa = texto;
-    console.log(this.conteudoPesquisa);
+    this.apiTwitterService.conteudoPesquisa = texto;
+    console.log(this.apiTwitterService.conteudoPesquisa);
   }
 
 }
