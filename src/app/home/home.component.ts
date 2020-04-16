@@ -12,12 +12,16 @@ export class HomeComponent implements OnInit {
   erroAtivo: any;
   @ViewChild('conteudoInput') conteudoInput: ElementRef;
 
-  // variavel que recebe o conteudo limpo que será pesquisado
 
+  retorno: any = {};
 
   constructor( private apiTwitterService: ApiTwitterService  ) { }
 
   ngOnInit(): void {
+    this.apiTwitterService.getData().subscribe((res: any) => {
+      this.retorno = Array.from(Object.keys(res), k => res[k]);
+      console.log(this.retorno);
+    });
   }
 
   // Após pesquisa chama a validação do valor
@@ -48,8 +52,12 @@ export class HomeComponent implements OnInit {
     if (texto[0] === '#') {
       texto = texto.replace(texto[0], '');
     }
+
+      // variavel que recebe o conteudo limpo que será pesquisado
     this.apiTwitterService.conteudoPesquisa = texto;
     console.log(this.apiTwitterService.conteudoPesquisa);
   }
 
 }
+
+
