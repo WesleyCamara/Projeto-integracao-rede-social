@@ -8,10 +8,18 @@ export class ApiTwitterService {
 
   public conteudoPesquisa: any;
 
-  private apiurl = 'https://cors-anywhere.herokuapp.com/api.twitter.com:443/oauth2/token';
+  private url = 'https://jsonplaceholder.typicode.com/posts/';
+  private options = {
+    method: 'GET',
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+    },
+  };
 
   constructor(private http: HttpClient) { }
   getData(){
-    return this.http.get(this.apiurl);
+    return this.http.get(this.url, this.options);
   }
 }
+
+
