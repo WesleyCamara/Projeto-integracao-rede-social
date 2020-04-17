@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.apiTwitterService.getData().subscribe((res: any) => {
       this.retorno = Array.from(Object.keys(res), k => res[k]);
-      console.log(this.retorno);
+      console.log(this.retorno[0]);
     });
   }
 
