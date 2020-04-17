@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
     event.preventDefault();
     this.verificaConteudoVazio(this.conteudoInput.nativeElement.value);
     this.limpaHashtag(this.conteudoInput.nativeElement.value);
-    this.busca(this.conteudoInput.nativeElement.value);
+    this.busca(this.apiTwitterService.conteudoPesquisa);
   }
 
   // Verifica se o conteudo de pesquisa não está vazio
@@ -56,10 +56,11 @@ export class HomeComponent implements OnInit {
     console.log(this.apiTwitterService.conteudoPesquisa);
   }
 
-  busca(conteudo){this.apiTwitterService.getData(conteudo).subscribe((res: any) => {
+  busca(conteudo){
+    this.apiTwitterService.getData(conteudo).subscribe((res: any) => {
     this.retorno = Array.from(Object.keys(res), k => res[k]);
     console.log(this.retorno[0]);
-  });}
+  }); }
 
 }
 
