@@ -18,10 +18,7 @@ export class HomeComponent implements OnInit {
   constructor( private apiTwitterService: ApiTwitterService  ) { }
 
   ngOnInit(): void {
-    this.apiTwitterService.getData().subscribe((res: any) => {
-      this.retorno = Array.from(Object.keys(res), k => res[k]);
-      console.log(this.retorno[0]);
-    });
+
   }
 
   // Após pesquisa chama a validação do valor
@@ -29,6 +26,7 @@ export class HomeComponent implements OnInit {
     event.preventDefault();
     this.verificaConteudoVazio(this.conteudoInput.nativeElement.value);
     this.limpaHashtag(this.conteudoInput.nativeElement.value);
+    this.busca(this.conteudoInput.nativeElement.value);
   }
 
   // Verifica se o conteudo de pesquisa não está vazio
@@ -57,6 +55,11 @@ export class HomeComponent implements OnInit {
     this.apiTwitterService.conteudoPesquisa = texto;
     console.log(this.apiTwitterService.conteudoPesquisa);
   }
+
+  busca(conteudo){this.apiTwitterService.getData(conteudo).subscribe((res: any) => {
+    this.retorno = Array.from(Object.keys(res), k => res[k]);
+    console.log(this.retorno[0]);
+  });}
 
 }
 
