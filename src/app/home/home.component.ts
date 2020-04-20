@@ -23,10 +23,11 @@ export class HomeComponent implements OnInit {
 
   // Após pesquisa chama a validação do valor
   pesquisar(event) {
+    const valorInput = this.conteudoInput.nativeElement.value;
     event.preventDefault();
-    this.verificaConteudoVazio(this.conteudoInput.nativeElement.value);
-    this.limpaHashtag(this.conteudoInput.nativeElement.value);
-    this.busca(this.apiTwitterService.conteudoPesquisa);
+    this.verificaConteudoVazio(valorInput);
+    this.limpaHashtag(valorInput);
+    this.buscarNaApi(valorInput);
   }
 
   // Verifica se o conteudo de pesquisa não está vazio
@@ -39,7 +40,7 @@ export class HomeComponent implements OnInit {
   }
 
   // Valida os dados para pesquisa
-  removeErro() {
+  removeMensagemErro() {
     if (this.conteudoInput.nativeElement.value){
     this.erroAtivo = false;
     }
@@ -56,10 +57,11 @@ export class HomeComponent implements OnInit {
     console.log(this.apiTwitterService.conteudoPesquisa);
   }
 
-  busca(conteudo){
-    this.apiTwitterService.getData(conteudo).subscribe((res: any) => {
+  buscarNaApi(texto){this.apiTwitterService.getData(texto).subscribe((res: any) => {
     this.retorno = Array.from(Object.keys(res), k => res[k]);
-    console.log(this.retorno[0]);
+    console.log(this.retorno);
+    console.log(this.retorno[0][0].text);
+
   }); }
 
 }
