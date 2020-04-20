@@ -12,8 +12,10 @@ export class HomeComponent implements OnInit {
   erroAtivo: any;
   @ViewChild('conteudoInput') conteudoInput: ElementRef;
 
+  // retorno da chamada a API
+  retornoAPI: any = {};
 
-  retorno: any = {};
+
 
   constructor( private apiTwitterService: ApiTwitterService  ) { }
 
@@ -58,12 +60,13 @@ export class HomeComponent implements OnInit {
   }
 
   buscarNaApi(texto){this.apiTwitterService.getData(texto).subscribe((res: any) => {
-    this.retorno = Array.from(Object.keys(res), k => res[k]);
-    console.log(this.retorno);
-    console.log(this.retorno[0][0].text);
+    this.retornoAPI = Array.from(Object.keys(res), k => res[k])[0];
+    console.log(this.retornoAPI);
 
   }); }
 
-}
 
+  // Área para inserção do código para mostrar imagens e textos
+
+}
 
