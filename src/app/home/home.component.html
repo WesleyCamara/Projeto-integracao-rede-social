@@ -23,10 +23,11 @@
               <div class="info-usuario">
                   <h3 class="perfil-usuario">{{ item.user.name }}</h3>
                   <p class="id-usuario">@{{item.user.screen_name}}</p>
-                  <p class="data-usuario">Maio 20</p>
+                  <p class="data-usuario">{{ item.created_at | date: 'MMM yy' }}</p>
 
               </div>
           </div>
+
           <div class="media-mensagem">
               <p class="mensagem" >{{ item.text }}</p>
               <a class="link" target="_blank" [href]="'https://twitter.com/' + item.user.screen_name + '/status/' + item.id_str">Visualizar mais no Twitter</a>
