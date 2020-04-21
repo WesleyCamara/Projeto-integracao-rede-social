@@ -18,22 +18,21 @@
       <div class="media-post" data-anime="down" *ngFor ='let item of retornoAPI'>
           <div class="media-info">
               <div class="img-perfil">
-                  <img src="../../assets/img/img-perfil1.png" alt="Imagem de Perfil 1">
+                  <img src={{item.user.profile_image_url_https}} alt="Imagem de Perfil 1">
               </div>
               <div class="info-usuario">
-                  <h3 class="perfil-usuario">Ciara</h3>
-                  <p class="id-usuario">@asdasd.</p>
+                  <h3 class="perfil-usuario">{{ item.user.name }}</h3>
+                  <p class="id-usuario">@{{item.user.screen_name}}</p>
                   <p class="data-usuario">Maio 20</p>
 
               </div>
           </div>
           <div class="media-mensagem">
               <p class="mensagem" >{{ item.text }}</p>
-              <a class="link" href="https://twitter.com">Visualizar mais no Twitter</a>
+              <a class="link" target="_blank" [href]="'https://twitter.com/' + item.user.screen_name + '/status/' + item.id_str">Visualizar mais no Twitter</a>
           </div>
       </div>
       <!--Fim da Publicação post 1-->
-
 
 
       <!--Área de visualização das 10 ultimas imagens-->

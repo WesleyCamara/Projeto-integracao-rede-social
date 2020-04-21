@@ -13,11 +13,11 @@ export class HomeComponent implements OnInit {
   @ViewChild('conteudoInput') conteudoInput: ElementRef;
 
   // retorno da chamada a API
-  retornoAPI: any = {};
+  retornoAPI: any = [];
 
 
 
-  constructor( private apiTwitterService: ApiTwitterService  ) { }
+  constructor(private apiTwitterService: ApiTwitterService) { }
 
   ngOnInit(): void {
 
@@ -43,8 +43,8 @@ export class HomeComponent implements OnInit {
 
   // Valida os dados para pesquisa
   removeMensagemErro() {
-    if (this.conteudoInput.nativeElement.value){
-    this.erroAtivo = false;
+    if (this.conteudoInput.nativeElement.value) {
+      this.erroAtivo = false;
     }
   }
 
@@ -54,16 +54,19 @@ export class HomeComponent implements OnInit {
       texto = texto.replace(texto[0], '');
     }
 
-      // variavel que recebe o conteudo limpo que será pesquisado
+    // variavel que recebe o conteudo limpo que será pesquisado
     this.apiTwitterService.conteudoPesquisa = texto;
-    console.log(this.apiTwitterService.conteudoPesquisa);
   }
 
-  buscarNaApi(texto){this.apiTwitterService.getData(texto).subscribe((res: any) => {
-    this.retornoAPI = Array.from(Object.keys(res), k => res[k])[0];
-    console.log(this.retornoAPI);
+  buscarNaApi(texto) {
+    if (texto.length > 0) {
+      this.apiTwitterService.getData(texto).subscribe((res: any) => {
+        this.retornoAPI = Array.from(Object.keys(res), k => res[k])[0];
+        console.log(this.retornoAPI);
 
-  }); }
+      });
+    }
+  }
 
 
   // Área para inserção do código para mostrar imagens e textos
