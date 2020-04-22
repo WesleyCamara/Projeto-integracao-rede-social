@@ -7,7 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 export class ApiTwitterService {
   public conteudoPesquisa: any;
-  private apiurl = 'https://cors-anywhere.herokuapp.com/api.twitter.com:443/1.1/search/tweets.json?count=10&q=';
+  private apiurl = 'https://cors-anywhere.herokuapp.com/api.twitter.com:443/1.1/search/tweets.json?include_entities=true&count=100&q=';
   private options = {
     method: 'GET',
     headers: {

@@ -1,57 +1,74 @@
 <main>
   <!-- Caixa de busca -->
   <form class="main-busca" id="busca" (submit)="pesquisar($event)">
-      <input type="text"  id="input-busca"  class="main-busca-input"
-      placeholder="Digite o termo para pesquisa" autofocus #conteudoInput (keyup)="removeMensagemErro()"/>
-      <button type="submit" class="main-busca-botao" >
-          <i class="fas fa-search" id="img-busca"></i>
-      </button>
+    <input type="text" id="input-busca" class="main-busca-input" placeholder="Digite o termo para pesquisa" autofocus
+      #conteudoInput (keyup)="removeMensagemErro()" />
+    <button type="submit" class="main-busca-botao">
+      <i class="fas fa-search" id="img-busca"></i>
+    </button>
   </form>
 
   <div class="mensagem-erro" *ngIf="erroAtivo">
-      <p>Digite um texto para pesquisa</p>
+    <p>Digite um texto para pesquisa</p>
   </div>
 
   <!--Área de visualização das 10 ultimas postagens-->
   <section class="media-container">
-      <!-- Publicação post 1 -->
-      <div class="media-post" data-anime="down" *ngFor ='let item of retornoAPI'>
-          <div class="media-info">
-              <div class="img-perfil">
-                  <img src={{item.user.profile_image_url_https}} alt="Imagem de Perfil 1">
-              </div>
-              <div class="info-usuario">
-                  <h3 class="perfil-usuario">{{ item.user.name }}</h3>
-                  <p class="id-usuario">@{{item.user.screen_name}}</p>
-                  <p class="data-usuario">{{ item.created_at | date: 'MMM yy' }}</p>
+    <!-- Publicação post 1 -->
+    <div class="media-post" data-anime="down" *ngFor='let item of retornoAPI'>
+      <div class="media-info">
+        <div class="img-perfil">
+          <img src={{item.user.profile_image_url_https}} alt="Imagem de Perfil 1">
+        </div>
+        <div class="info-usuario">
+          <h3 class="perfil-usuario">{{ item.user.name }}</h3>
+          <p class="id-usuario">@{{item.user.screen_name}}</p>
+          <p class="data-usuario">{{ item.created_at | date: 'MMM yy' }}</p>
 
-              </div>
-          </div>
-
-          <div class="media-mensagem">
-              <p class="mensagem" >{{ item.text }}</p>
-              <a class="link" target="_blank" [href]="'https://twitter.com/' + item.user.screen_name + '/status/' + item.id_str">Visualizar mais no Twitter</a>
-          </div>
+          Tag para colocar a imagem no
+          post------------------------------------------------------------------------------------------------------------
+          <div *ngIf="item.extended_entities">
+            <img src={{item.extended_entities.media[0].media_url}} alt="Imagem de Perfil 1"> </div>
+        </div>
+        ------------------------------------------------------------------------------------------------------------
       </div>
-      <!--Fim da Publicação post 1-->
 
-
-      <!--Área de visualização das 10 ultimas imagens-->
-      <div class="media-post">
-          <div class="gallery">
-              <a href="../../assets/img/img-post1.jpg"data-lightbox="media-post" data-title="Imagem Post 1 - Publicado por: @Ciara"><img src="../../assets/img/img-post1-small.jpg"></a>
-              <a href="../../assets/img/img-post2.jpg"data-lightbox="media-post" data-title="Imagem Post 2 - Publicado por: @Maria"><img src="../../assets/img/img-post2-small.jpg"></a>
-              <a href="../../assets/img/img-post3.jpg"data-lightbox="media-post" data-title="Imagem Post 3 - Publicado por: @Joana"><img src="../../assets/img/img-post3-small.jpg"></a>
-              <a href="../../assets/img/img-post4.jpg"data-lightbox="media-post" data-title="Imagem Post 4 - Publicado por: @Isabela"><img src="../../assets/img/img-post4-small.jpg"></a>
-              <a href="../../assets/img/img-post5.jpg"data-lightbox="media-post" data-title="Imagem Post 5 - Publicado por: @Ana"><img src="../../assets/img/img-post10-small.jpg"></a>
-              <a href="../../assets/img/img-post6.jpg"data-lightbox="media-post" data-title="Imagem Post 6 - Publicado por: @Arielle"><img src="../../assets/img/img-post5-small.jpg"></a>
-              <a href="../../assets/img/img-post7.jpg"data-lightbox="media-post" data-title="Imagem Post 7 - Publicado por: @Beatriz"><img src="../../assets/img/img-post6-small.jpg"></a>
-              <a href="../../assets/img/img-post8.jpg"data-lightbox="media-post" data-title="Imagem Post 8 - Publicado por: @Bianca"><img src="../../assets/img/img-post7-small.jpg"></a>
-              <a href="../../assets/img/img-post9.jpg"data-lightbox="media-post" data-title="Imagem Post 9 - Publicado por: @Carla"><img src="../../assets/img/img-post8-small.jpg"></a>
-              <a href="../../assets/img/img-post10.jpg"data-lightbox="media-post" data-title="Imagem Post 10 - Publicado por: @Carol"><img src="../../assets/img/img-post9-small.jpg"></a>
-          </div>
+      <div class="media-mensagem">
+        <p class="mensagem">{{ item.text }}</p>
+        <a class="link" target="_blank"
+          [href]="'https://twitter.com/' + item.user.screen_name + '/status/' + item.id_str">Visualizar mais no
+          Twitter</a>
       </div>
-      <!--Fim da área dos Posts-->
+    </div>
+    <!--Fim da Publicação post 1-->
+
+
+    <!--Área de visualização das 10 ultimas imagens-->
+    <div class="media-post">
+      <div class="gallery">
+        <a href="../../assets/img/img-post1.jpg" data-lightbox="media-post"
+          data-title="Imagem Post 1 - Publicado por: @Ciara"><img src="../../assets/img/img-post1-small.jpg"></a>
+        <a href="../../assets/img/img-post2.jpg" data-lightbox="media-post"
+          data-title="Imagem Post 2 - Publicado por: @Maria"><img src="../../assets/img/img-post2-small.jpg"></a>
+        <a href="../../assets/img/img-post3.jpg" data-lightbox="media-post"
+          data-title="Imagem Post 3 - Publicado por: @Joana"><img src="../../assets/img/img-post3-small.jpg"></a>
+        <a href="../../assets/img/img-post4.jpg" data-lightbox="media-post"
+          data-title="Imagem Post 4 - Publicado por: @Isabela"><img src="../../assets/img/img-post4-small.jpg"></a>
+        <a href="../../assets/img/img-post5.jpg" data-lightbox="media-post"
+          data-title="Imagem Post 5 - Publicado por: @Ana"><img src="../../assets/img/img-post10-small.jpg"></a>
+        <a href="../../assets/img/img-post6.jpg" data-lightbox="media-post"
+          data-title="Imagem Post 6 - Publicado por: @Arielle"><img src="../../assets/img/img-post5-small.jpg"></a>
+        <a href="../../assets/img/img-post7.jpg" data-lightbox="media-post"
+          data-title="Imagem Post 7 - Publicado por: @Beatriz"><img src="../../assets/img/img-post6-small.jpg"></a>
+        <a href="../../assets/img/img-post8.jpg" data-lightbox="media-post"
+          data-title="Imagem Post 8 - Publicado por: @Bianca"><img src="../../assets/img/img-post7-small.jpg"></a>
+        <a href="../../assets/img/img-post9.jpg" data-lightbox="media-post"
+          data-title="Imagem Post 9 - Publicado por: @Carla"><img src="../../assets/img/img-post8-small.jpg"></a>
+        <a href="../../assets/img/img-post10.jpg" data-lightbox="media-post"
+          data-title="Imagem Post 10 - Publicado por: @Carol"><img src="../../assets/img/img-post9-small.jpg"></a>
+      </div>
+    </div>
+    <!--Fim da área dos Posts-->
   </section>
 
 </main>

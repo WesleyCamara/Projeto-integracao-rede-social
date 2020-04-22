@@ -15,6 +15,9 @@ export class HomeComponent implements OnInit {
   // retorno da chamada a API
   retornoAPI: any = [];
 
+  // tweets com imagem
+  tweetImagem: any = [];
+
 
 
   constructor(private apiTwitterService: ApiTwitterService) { }
@@ -62,14 +65,29 @@ export class HomeComponent implements OnInit {
     if (texto.length > 0) {
       this.apiTwitterService.getData(texto).subscribe((res: any) => {
         this.retornoAPI = Array.from(Object.keys(res), k => res[k])[0];
-        console.log(this.retornoAPI[1]);
 
+        this.filtraImagens(this.retornoAPI);
       });
     }
+
   }
 
 
+
   // Área para inserção do código para mostrar imagens e textos
+
+  filtraImagens(tweet){
+
+    console.log(tweet);
+    for (const value of tweet) {
+      if (value.entities.media){
+        this.tweetImagem.push(value);
+        console.log(value.entities.media[0].media_url_https);
+      }
+
+    }
+    console.log(this.tweetImagem);
+  }
 
 }
 
