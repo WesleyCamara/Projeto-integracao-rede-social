@@ -12,6 +12,7 @@
     <p>Digite um texto para pesquisa</p>
   </div>
 
+
   <!--Área de visualização das 10 ultimas postagens-->
   <section class="media-container">
     <!-- Publicação post 1 -->
@@ -25,12 +26,12 @@
           <p class="id-usuario">@{{item.user.screen_name}}</p>
           <p class="data-usuario">{{ item.created_at | date: 'MMM yy' }}</p>
 
-          Tag para colocar a imagem no
-          post------------------------------------------------------------------------------------------------------------
-          <div *ngIf="item.extended_entities">
+        <!-- Tag para colocar a imagem no
+          post------------------------------------------------------------------------------------------------------------ -->
+          <!-- <div *ngIf="item.extended_entities">
             <img src={{item.extended_entities.media[0].media_url}} alt="Imagem de Perfil 1"> </div>
         </div>
-        ------------------------------------------------------------------------------------------------------------
+        ------------------------------------------------------------------------------------------------------------ -->
       </div>
 
       <div class="media-mensagem">
@@ -40,6 +41,7 @@
           Twitter</a>
       </div>
     </div>
+  </div>
     <!--Fim da Publicação post 1-->
 
 
@@ -68,6 +70,7 @@
           data-title="Imagem Post 10 - Publicado por: @Carol"><img src="../../assets/img/img-post9-small.jpg"></a>
       </div>
     </div>
+
     <!--Fim da área dos Posts-->
   </section>
 
