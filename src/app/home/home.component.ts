@@ -62,7 +62,7 @@ export class HomeComponent implements OnInit {
     if (texto.length > 0) {
       this.apiTwitterService.getData(texto).subscribe((res: any) => {
         this.retornoAPI = Array.from(Object.keys(res), k => res[k])[0];
-        console.log(this.retornoAPI);
+        console.log(this.retornoAPI[1]);
 
       });
     }
