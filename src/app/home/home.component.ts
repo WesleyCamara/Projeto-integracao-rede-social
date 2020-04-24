@@ -18,6 +18,9 @@ export class HomeComponent implements OnInit {
   // tweets com imagem
   tweetImagem: any = [];
 
+  // Mostra o preenchimento da tela quando não houver conteudo pesquisado
+  telaInicial: any = true;
+
 
 
   constructor(private apiTwitterService: ApiTwitterService) { }
@@ -66,7 +69,7 @@ export class HomeComponent implements OnInit {
     if (texto.length > 0) {
       this.apiTwitterService.getData(texto).subscribe((res: any) => {
         this.retornoAPI = Array.from(Object.keys(res), k => res[k])[0];
-
+        this.telaInicial = false;
         this.filtraImagens(this.retornoAPI);
       });
     }

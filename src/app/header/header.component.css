@@ -33,11 +33,6 @@
   transition: all 0.4s ease;
 }
 
-.main-busca-botao:hover {
-  background: #334459;
-  transition: all 0.4s ease;
-}
-
 .nav-separador {
   margin: 5px;
 }

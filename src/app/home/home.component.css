@@ -38,6 +38,12 @@ textarea:focus, input:focus, select:focus {
   border: none;
   box-shadow: 0px 3px 6px #00000029;
   border-radius: 23px;
+  padding-top: 5px;
+}
+
+.main-busca-botao:hover {
+  background: #334459;
+  transition: all 0.4s ease;
 }
 
 button:focus, button:active {
@@ -130,8 +136,27 @@ Mensagem de erro que aparecerá quando o usuário tentar pesquisar sem digitar t
 /* Estilização da area de mensagens e imagens */
 /*------------------------------------------------------------------------------------------------------------- */
 
+
+.main-inicio-backgound{
+  max-width: 90%;
+  height: 60vh;
+  text-align: center;
+  color: #334459;
+  margin-top: 100px;
+}
+
+.fa-arrow-up{
+  font-size: 3em;
+  color: #F67A56;
+}
+
+.main-inicio-backgound p{
+  font-size: 1.75em;
+  color: #334459;
+  line-height: 5em;
+}
+
 .media-posts-container{
-  margin-top: -100px;
   margin-bottom: 150px;
 }
 
