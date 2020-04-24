@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgImageSliderModule } from 'ng-image-slider';
+import { ImageSliderDemoComponent } from './image-slider-demo/image-slider-demo.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HeaderComponent,
     HomeComponent,
     FooterComponent,
-    SobreComponent
+    SobreComponent,
+    ImageSliderDemoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    NgImageSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

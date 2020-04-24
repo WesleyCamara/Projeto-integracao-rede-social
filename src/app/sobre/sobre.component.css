@@ -131,6 +131,7 @@
 }
 
 .mini-card{
+  width: 20%;
   margin: 0 2rem;
   background: #F67A56;
   color: #FFFFFF;
@@ -149,7 +150,6 @@
 }
 
 .mini-card p{
-
   margin: 1rem;
   text-align: center;
 
