@@ -130,8 +130,9 @@ Mensagem de erro que aparecerá quando o usuário tentar pesquisar sem digitar t
 /* Estilização da area de mensagens e imagens */
 /*------------------------------------------------------------------------------------------------------------- */
 
-.media-container{
+.media-posts-container{
   margin-top: -100px;
+  margin-bottom: 150px;
 }
 
 .media-post {
@@ -142,6 +143,10 @@ Mensagem de erro que aparecerá quando o usuário tentar pesquisar sem digitar t
   border: 1px solid #E8EEF1;
   margin: 1.125em auto;
   min-width: 260px;
+}
+
+.perfil-usuario{
+  font-size: 1.25em;
 }
 
 .media-info {

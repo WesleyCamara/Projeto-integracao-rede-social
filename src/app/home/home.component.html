@@ -13,7 +13,7 @@
   </div>
 
   <!--Área de visualização das 10 ultimas postagens-->
-  <section class="media-container">
+  <section class="media-posts-container">
     <!-- Publicação post 1 -->
     <div class="media-post" data-anime="down" *ngFor='let item of retornoAPI'>
       <div class="media-info">
@@ -24,28 +24,43 @@
           <h3 class="perfil-usuario">{{ item.user.name }}</h3>
           <p class="id-usuario">@{{item.user.screen_name}}</p>
           <p class="data-usuario">{{ item.created_at | date: 'MMM yy' }}</p>
-
-        <!-- Tag para colocar a imagem no
-          post------------------------------------------------------------------------------------------------------------ -->
-          <!-- <div *ngIf="item.extended_entities">
-            <img src={{item.extended_entities.media[0].media_url}} alt="Imagem de Perfil 1"> </div>
         </div>
-        ------------------------------------------------------------------------------------------------------------ -->
-      </div>
 
-      <div class="media-mensagem">
-        <p class="mensagem">{{ item.text }}</p>
-        <a class="link" target="_blank"
-          [href]="'https://twitter.com/' + item.user.screen_name + '/status/' + item.id_str">Visualizar mais no
-          Twitter</a>
+        <div class="media-mensagem">
+          <p class="mensagem">{{ item.text }}</p>
+
+          <!-- Tag para colocar a imagem no post------------------------------------------------------------------------------------------------------------ -->
+          <div *ngIf="item.extended_entities">
+            <img src={{item.extended_entities.media[0].media_url}} alt="Imagem de Perfil 1">
+          </div>
+
+          <a class="link" target="_blank"
+            [href]="'https://twitter.com/' + item.user.screen_name + '/status/' + item.id_str">Visualizar mais no
+            Twitter</a>
+        </div>
       </div>
     </div>
-  </div>
-    <!--Fim da Publicação post -->
+  </section>
+  <!--Fim da Publicação post -->
+
+
+  
+  <section>
+    <ngb-carousel class="">
+      <ng-template ngbSlide *ngFor='let item of tweetImagem'>
+        <div class="picsum-img-wrapper">
+          <img src={{item.extended_entities.media[0].media_url}} alt="Angular Carousel 1">
+        </div>
+        <div class="carousel-caption">
+          <h3>Publicado por:</h3>
+          <p>@{{item.user.screen_name}}</p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
 
 
     <!--Área de visualização das 10 ultimas imagens-->
-    <div class="media-post">
+    <!-- <div class="media-post">
       <div class="gallery">
         <a href="../../assets/img/img-post1.jpg" data-lightbox="media-post"
           data-title="Imagem Post 1 - Publicado por: @Ciara"><img src="../../assets/img/img-post1-small.jpg"></a>
@@ -68,9 +83,9 @@
         <a href="../../assets/img/img-post10.jpg" data-lightbox="media-post"
           data-title="Imagem Post 10 - Publicado por: @Carol"><img src="../../assets/img/img-post9-small.jpg"></a>
       </div>
-    </div>
+    </div> -->
+    <!--Fim da área de imagens-->
 
-    <!--Fim da área dos Posts-->
   </section>
 
 </main>

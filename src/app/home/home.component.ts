@@ -62,6 +62,7 @@ export class HomeComponent implements OnInit {
   }
 
   buscarNaApi(texto) {
+    console.log('chamou');
     if (texto.length > 0) {
       this.apiTwitterService.getData(texto).subscribe((res: any) => {
         this.retornoAPI = Array.from(Object.keys(res), k => res[k])[0];
