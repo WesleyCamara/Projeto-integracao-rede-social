@@ -32,7 +32,8 @@
   text-align: center;
   color: #334459;
   font-weight: 700;
-  ;
+  margin: 1rem 0;
+
 }
 
 .explicação-proj p {
@@ -74,7 +75,7 @@
 @media screen and (max-width: 375px) {
   .img-sobre {
       max-width: 80%;
-      margin-top: 250px;
+      margin-top: 270px;
   }
 }
 
@@ -87,7 +88,7 @@
 
 /*parte equipe*/
 
-#equipe {
+.equipe {
   padding: 10rem 0;
 }
 
@@ -108,31 +109,99 @@
   height: 333px;
 }
 
-.equipe-container {
+.equipe-conteudo {
   display: flex;
   align-items: center;
   align-content: center;
   flex-direction: column;
 }
 
+.container{
+  display: flex;
+  max-width: 80%;
+  margin: 2rem auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu{
+  display: flex;
+  flex-direction: row;
+}
+
+.mini-card{
+  margin: 0 2rem;
+  background: #F67A56;
+  color: #FFFFFF;
+  padding: 1rem;
+  transition: all .3s ease;
+  justify-content: center;
+
+}
+
+.mini-card:hover{
+  transform: translateY(-7px);
+}
+
+.mini-card .active{
+  margin-top: -7px;
+}
+
+.mini-card p{
+
+  margin: 1rem;
+  text-align: center;
+
+}
+
+.mini-card .btn {
+  padding: .4rem 1rem;
+  background-color: #FFFFFF;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  color: #334459;
+  font-size: 1rem;
+  transition: all .5s;
+  margin: .5rem;
+  cursor: pointer;
+}
+
+.mini-card .btn:hover {
+  transform: translateY(-5px);
+  box-shadow: .5rem .5rem 0 #334459;
+}
+
+
+
+.img-perfil-icone {
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: -5rem;
+  z-index: 99;
+  border: 1px solid #ebeef8;
+}
+
 .card {
-  width: 22rem;
+  width: 25rem;
   background-color: #ebeef8;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: .5rem .4rem;
+  margin: .5rem;
   box-shadow: .5rem .5rem 3rem rgba(0, 0, 0, 0.4);
+  transition: all .3s ease;
+  margin-top: 2rem;
+
 }
 
-.card:hover {
-  box-shadow: .5rem .5rem 3rem #F67A56;
-}
 
 .card .card-img {
   width: 100%;
-  height: 16rem;
+  height: 13rem;
   object-fit: cover;
   clip-path: polygon(0 0, 100% 0, 100% 78%, 0% 100%);
 }
@@ -148,38 +217,18 @@
 }
 
 .card h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #334459;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .introducao {
   font-size: 1em;
-  margin: 1.5rem 1rem;
+  margin: 1rem 1rem;
   text-align: center;
   color: #334459;
 }
 
-.card .btn {
-  padding: 1rem 2.5rem;
-  background-color: #F67A56;
-  border-radius: 2rem;
-  margin: 1rem 0;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  font-size: 1.4rem;
-  transition: all .5s;
-}
-
-.card .btn:hover {
-  transform: translateY(-2px);
-  box-shadow: .5rem .5rem 2rem rgba(0, 0, 0, 0.2);
-}
-
-.card .btn:active {
-  transform: translateY(0);
-  box-shadow: none;
-}
 
 .redes-sociais {
   width: 100%;
@@ -209,6 +258,113 @@
       align-items: flex-start;
   }
   .card {
-      margin: .5rem;
+      margin: .7rem;
+  }
+}
+
+@media screen and (max-width: 1024px){
+
+  .menu{
+      display: none;
+  }
+
+  .equipe-conteudo{
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+  }
+
+  .card{
+      width: 22rem;
+      background-color: #ebeef8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: .5rem 1.5rem;
+      box-shadow: .5rem .5rem 3rem rgba(0, 0, 0,0.4);
+  }
+
+
+  .card .card-img{
+      width: 100%;
+      height: 16rem;
+      object-fit: cover;
+      clip-path: polygon(0 0, 100% 0, 100% 78%, 0% 100%);
+
+
+  }
+
+  .img-perfil-sobre{
+      width: 10rem;
+      height: 10rem;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-top: -6rem;
+      z-index: 99;
+      border: 1px solid #ebeef8;
+  }
+
+  .card h2{
+      font-size: 2.5rem;
+      color: #334459;
+      margin: 2rem 0;
+  }
+
+  .introducao{
+      font-size: 1.4rem;
+      margin: 1.5rem 1rem;
+      text-align: center;
+      color: #334459;
+  }
+
+
+  .redes-sociais{
+      width: 100%;
+      list-style: none;
+      display: flex;
+      justify-content: space-evenly;
+      padding: 2rem 0;
+      margin-top: 1.5rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+  }
+
+  .redes-sociais i{
+      font-size: 3rem;
+      color: #334459;
+      transition: color .5s;
+  }
+
+}
+
+@media screen and (max-width: 768px){
+
+  .menu{
+      display: none;
+  }
+
+  .equipe-conteudo{
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+  }
+
+  .card{
+      width: 20rem;
+      background-color: #ebeef8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: .5rem auto;
+      box-shadow: .5rem .5rem 3rem rgba(0, 0, 0,0.4);
   }
 }
