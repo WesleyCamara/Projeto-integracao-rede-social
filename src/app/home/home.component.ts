@@ -9,6 +9,10 @@ import { ApiTwitterService } from '../services/api-twitter.service';
 })
 export class HomeComponent implements OnInit {
 
+  imageObject: Array<object> = [];
+
+
+
   erroAtivo: any;
   @ViewChild('conteudoInput') conteudoInput: ElementRef;
 
@@ -17,6 +21,9 @@ export class HomeComponent implements OnInit {
 
   // tweets com imagem
   tweetImagem: any = [];
+
+  // tweets com imagem
+  tweetTexto: Array<object> = [];
 
   // Mostra o preenchimento da tela quando não houver conteudo pesquisado
   telaInicial: any = true;
@@ -70,28 +77,41 @@ export class HomeComponent implements OnInit {
       this.apiTwitterService.getData(texto).subscribe((res: any) => {
         this.retornoAPI = Array.from(Object.keys(res), k => res[k])[0];
         this.telaInicial = false;
+        this.filtraTexto(this.retornoAPI);
         this.filtraImagens(this.retornoAPI);
       });
     }
-
   }
+
 
 
 
   // Área para inserção do código para mostrar imagens e textos
 
-  filtraImagens(tweet){
-
-    console.log(tweet);
+  filtraTexto(tweet) {
     for (const value of tweet) {
-      if (value.entities.media){
-        this.tweetImagem.push(value);
-        console.log(value.entities.media[0].media_url_https);
+      if (this.tweetTexto.length < 10) {
+        this.tweetTexto.push(value);
       }
-
     }
-    console.log(this.tweetImagem);
   }
 
+
+
+
+  filtraImagens(tweet) {
+    for (const value of tweet) {
+      if (value.entities.media && this.imageObject.length < 10) {
+        this.imageObject.push(
+          {
+            image: value.entities.media[0].media_url_https,
+            thumbImage: value.entities.media[0].media_url_https,
+            alt: value.user.name,
+            title: 'Postado por: ' + value.user.name
+          });
+      }
+    }
+  }
 }
+
 

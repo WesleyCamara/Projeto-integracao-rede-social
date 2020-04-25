@@ -23,8 +23,8 @@
 
 
   <!--Área de visualização das 10 ultimas postagens-->
-  <section class="media-posts-container" *ngIf="retornoAPI">
-    <div class="media-post" *ngFor='let item of retornoAPI'>
+  <section class="media-posts-container" *ngIf="tweetTexto">
+    <div class="media-post" *ngFor='let item of tweetTexto'>
       <div class="media-info">
 
         <div class="img-perfil">
@@ -78,16 +78,18 @@
 
 
   <!--Área de visualização das 10 ultimas imagens-->
-  <section class="media-imagens-container" *ngIf="tweetImagem">
+  <!-- <section class="media-imagens-container" *ngIf="tweetImagem">
     <div class="media-post">
       <div class="gallery" *ngFor='let item of tweetImagem'>
         <a href={{item.extended_entities.media[0].media_url}} data-lightbox="media-post"
           data-title="Publicado por: @{{item.user.screen_name}}">
           <img src={{item.extended_entities.media[0].media_url}}></a>
       </div>
-    </div>
+    </div> -->
     <!--Fim da área de imagens-->
 
-  </section>
+  <!-- </section> -->
+
+  <ng-image-slider [images]="imageObject" #nav *ngIf="!telaInicial"></ng-image-slider>
 
 </main>
