@@ -27,6 +27,7 @@
     <div class="media-post" *ngFor='let item of tweetTexto'>
       <div class="media-info">
 
+        <div class="media-post-info">
         <div class="img-perfil">
           <img src={{item.user.profile_image_url_https}} alt="Imagem de Perfil {{ item.user.name }} "
             class="post-imagem-perfil">
@@ -37,6 +38,7 @@
           <p class="id-usuario">@{{item.user.screen_name}}</p>
           <p class="data-usuario">{{ item.created_at | date: 'MMM yy' }}</p>
         </div>
+      </div>
 
         <div class="media-mensagem">
           <p class="mensagem">{{ item.text }}</p>
@@ -58,39 +60,8 @@
   <!--Fim da Publicação post -->
 
 
-  <!-- Carousel com as imagens dos posts-------------------------------------------------- -->
-  <!-- <section  *ngIf="!telaInicial">
-    <ngb-carousel *ngIf="tweetImagem">
-      <ng-template ngbSlide *ngFor='let item of tweetImagem'>
-        <div class="picsum-img-wrapper">
-          <img src={{item.extended_entities.media[0].media_url}} alt="Imagem postada por @{{item.user.screen_name}}">
-        </div>
-        <div class="carousel-caption">
-          <h3>Publicado por:</h3>
-          <img src={{item.user.profile_image_url_https}} alt="Imagem de Perfil {{ item.user.name }} " class="imagem-perfil-galeria">
-          <p>@{{item.user.screen_name}}</p>
-          <a class="link" target="_blank"
-            [href]="'https://twitter.com/' + item.user.screen_name + '/status/' + item.id_str">Visualizar mais no
-            Twitter</a>
-        </div>
-      </ng-template>
-    </ngb-carousel> -->
-
-
-  <!--Área de visualização das 10 ultimas imagens-->
-  <!-- <section class="media-imagens-container" *ngIf="tweetImagem">
-    <div class="media-post">
-      <div class="gallery" *ngFor='let item of tweetImagem'>
-        <a href={{item.extended_entities.media[0].media_url}} data-lightbox="media-post"
-          data-title="Publicado por: @{{item.user.screen_name}}">
-          <img src={{item.extended_entities.media[0].media_url}}></a>
-      </div>
-    </div> -->
-    <!--Fim da área de imagens-->
-
-  <!-- </section> -->
-
-  <ng-image-slider [images]="imageObject" #nav *ngIf="telaInicial === false"></ng-image-slider>
+  <!-- Slider com as ultimas 10 imagens -->
+  <ng-image-slider [images]="imageObject" #nav *ngIf="tweetImagem" class="slider"></ng-image-slider>
 
 
 </main>

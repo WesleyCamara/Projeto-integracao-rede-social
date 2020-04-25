@@ -20,14 +20,7 @@ export class HomeComponent implements OnInit {
   retornoAPI: any = [];
 
   // tweets com imagem
-  tweetImagem: any = [
-    {
-      image: '',
-      thumbImage: '',
-      alt: '',
-      title: ''
-    }
-  ];
+  tweetImagem: any = [];
 
   // tweets com imagem
   tweetTexto: any = [];
@@ -114,11 +107,10 @@ export class HomeComponent implements OnInit {
             image: value.entities.media[0].media_url_https,
             thumbImage: value.entities.media[0].media_url_https,
             alt: value.user.name,
-            title: 'Postado por: ' + value.user.name
+            title: 'Postado por: @' + value.user.screen_name
           });
       }
     }
   }
 }
-
 

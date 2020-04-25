@@ -157,7 +157,11 @@ Mensagem de erro que aparecerá quando o usuário tentar pesquisar sem digitar t
 }
 
 .media-posts-container{
-  margin-bottom: 150px;
+  margin-bottom: 100px;
+}
+
+.media-post-info{
+  display: flex;
 }
 
 .media-post {
@@ -176,6 +180,7 @@ Mensagem de erro que aparecerá quando o usuário tentar pesquisar sem digitar t
 
 .media-info {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   margin-top: 15px;
   margin-left: 15px;
@@ -184,6 +189,10 @@ Mensagem de erro que aparecerá quando o usuário tentar pesquisar sem digitar t
 .img-perfil {
   max-width: 64px;
   margin: 5px;
+}
+
+.img-perfil img {
+  border-radius: 50%;
 }
 
 .info-usuario, .info-usuario h3 {
@@ -211,33 +220,15 @@ Mensagem de erro que aparecerá quando o usuário tentar pesquisar sem digitar t
   color: blue;
 }
 
-/* --Animação do scroll dos textos*/
-
-[data-anime] {
-  opacity: 1;
-  transition: .3s;
+.mensagem{
+  width: 100%;
 }
 
-[data-anime="left"] {
-  transform: translate3d(50px, 0, 0);
-}
 
-[data-anime="rigth"] {
-  transform: translate3d(50px, 0, 0);
-}
-
-[data-anime="down"] {
-  transform: translate3d(0, 100px, 0);
-}
-
-[data-anime].animate{
-  opacity: 1;
-  transform: translate3d(0px, 0px, 0px);
-}
 
 @media only screen and (min-width: 426px) {
   .media-mensagem {
-      margin-left: 35.5px;
+      margin-left: 70px;
       margin-right: 35.5px;
       margin-bottom: 15px;;
   }
@@ -280,4 +271,9 @@ main {
   .gallery img{
       max-width: 120px;
   }
+}
+
+
+.slider{
+ margin-bottom: 50px;
 }
