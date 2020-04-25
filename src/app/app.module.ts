@@ -10,7 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgImageSliderModule } from 'ng-image-slider';
-import { ImageSliderDemoComponent } from './image-slider-demo/image-slider-demo.component';
+
 
 @NgModule({
   declarations: [
@@ -18,8 +18,7 @@ import { ImageSliderDemoComponent } from './image-slider-demo/image-slider-demo.
     HeaderComponent,
     HomeComponent,
     FooterComponent,
-    SobreComponent,
-    ImageSliderDemoComponent
+    SobreComponent
   ],
   imports: [
     BrowserModule,

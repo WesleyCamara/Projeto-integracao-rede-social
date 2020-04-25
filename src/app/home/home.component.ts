@@ -9,7 +9,7 @@ import { ApiTwitterService } from '../services/api-twitter.service';
 })
 export class HomeComponent implements OnInit {
 
-  imageObject: Array<object> = [];
+  imageObject: any = [];
 
 
 
@@ -20,10 +20,17 @@ export class HomeComponent implements OnInit {
   retornoAPI: any = [];
 
   // tweets com imagem
-  tweetImagem: any = [];
+  tweetImagem: any = [
+    {
+      image: '',
+      thumbImage: '',
+      alt: '',
+      title: ''
+    }
+  ];
 
   // tweets com imagem
-  tweetTexto: Array<object> = [];
+  tweetTexto: any = [];
 
   // Mostra o preenchimento da tela quando não houver conteudo pesquisado
   telaInicial: any = true;
