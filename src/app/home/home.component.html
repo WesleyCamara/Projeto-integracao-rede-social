@@ -61,7 +61,8 @@
 
 
   <!-- Slider com as ultimas 10 imagens -->
-  <ng-image-slider [images]="imageObject" #nav *ngIf="tweetImagem" class="slider"></ng-image-slider>
-
+  <div *ngIf="!telaInicial">
+  <ng-image-slider [images]="imageObject" #nav  class="slider"></ng-image-slider>
+  </div>
 
 </main>
