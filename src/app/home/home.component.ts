@@ -43,6 +43,10 @@ export class HomeComponent implements OnInit {
     this.verificaConteudoVazio(valorInput);
     this.limpaHashtag(valorInput);
     this.buscarNaApi(valorInput);
+    this.tweetTexto = [];
+    this.imageObject = [];
+
+
   }
 
   // Verifica se o conteudo de pesquisa não está vazio
