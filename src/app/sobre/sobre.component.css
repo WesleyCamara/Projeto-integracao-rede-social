@@ -25,7 +25,6 @@
 
 .explicação-proj p {
   max-width: 560px;
-
 }
 
 .explicação-proj h1 {
@@ -122,7 +121,7 @@
   max-width: 80%;
   margin: 2rem auto;
   flex-direction: column;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -327,6 +326,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .container {
+    flex-wrap: nowrap;
+  }
   .menu {
     display: none;
   }
@@ -350,7 +352,7 @@
 }
 
 @media screen and (max-width: 320px) {
-  #menu-perfil{
+  #menu-perfil {
     padding: 25px;
   }
 }

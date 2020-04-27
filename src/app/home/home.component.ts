@@ -76,7 +76,6 @@ export class HomeComponent implements OnInit {
   }
 
   buscarNaApi(texto) {
-    console.log('chamou');
     if (texto.length > 0) {
       this.apiTwitterService.getData(texto).subscribe((res: any) => {
         this.retornoAPI = Array.from(Object.keys(res), k => res[k])[0];
@@ -88,9 +87,8 @@ export class HomeComponent implements OnInit {
   }
 
 
-
-
   // Área para inserção do código para mostrar imagens e textos
+  // ______________________________________________________________
 
   filtraTexto(tweet) {
     for (const value of tweet) {
@@ -99,9 +97,6 @@ export class HomeComponent implements OnInit {
       }
     }
   }
-
-
-
 
   filtraImagens(tweet) {
     for (const value of tweet) {
@@ -115,7 +110,6 @@ export class HomeComponent implements OnInit {
           });
       }
     }
-    console.log(this.imageObject);
   }
 }
 
