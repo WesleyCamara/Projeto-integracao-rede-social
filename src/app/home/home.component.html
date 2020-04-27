@@ -1,7 +1,7 @@
 <main>
   <!-- Caixa de busca -->
   <form class="main-busca" id="busca" (submit)="pesquisar($event)">
-    <input type="text" id="input-busca" class="main-busca-input" placeholder="Digite o termo para pesquisa" autofocus
+    <input type="text" id="input-busca" class="main-busca-input" placeholder="Digite sua pesquisa" autofocus
       #conteudoInput (keyup)="removeMensagemErro()" />
     <button type="submit" class="main-busca-botao">
       <i class="fas fa-search" id="img-busca"></i>
@@ -18,7 +18,6 @@
   <div class="main-inicio-backgound" *ngIf="telaInicial">
     <i class="fas fa-arrow-up"></i>
     <p>Pesquise algo interessante</p>
-    <p>Ainda não temos nada para mostrar...</p>
   </div>
 
 
