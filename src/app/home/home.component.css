@@ -107,6 +107,21 @@ Mensagem de erro que aparecerá quando o usuário tentar pesquisar sem digitar t
   line-height: 5em;
 }
 
+.main-inicio-loading {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 90%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.main-inicio-loading img{
+  margin-top: 30px;
+}
+
+
+
 .media-posts-container {
   margin-bottom: 100px;
 }

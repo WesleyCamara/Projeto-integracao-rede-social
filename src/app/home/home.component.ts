@@ -25,6 +25,9 @@ export class HomeComponent implements OnInit {
   // tweets com imagem
   tweetTexto: any = [];
 
+  // GIF com o loading
+  loading: any = false;
+
   // Mostra o preenchimento da tela quando não houver conteudo pesquisado
   telaInicial: any = true;
 
@@ -38,6 +41,7 @@ export class HomeComponent implements OnInit {
 
   // Após pesquisa chama a validação do valor
   pesquisar(event) {
+    this.loading = true;
     const valorInput = this.conteudoInput.nativeElement.value;
     event.preventDefault();
     this.verificaConteudoVazio(valorInput);
@@ -45,6 +49,7 @@ export class HomeComponent implements OnInit {
     this.buscarNaApi(valorInput);
     this.tweetTexto = [];
     this.imageObject = [];
+    this.telaInicial = true;
 
 
   }
@@ -96,6 +101,7 @@ export class HomeComponent implements OnInit {
         this.tweetTexto.push(value);
       }
     }
+    this.loading = false;
   }
 
   filtraImagens(tweet) {
